@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1094873982336",
+    "project_id": "fair-pro-e0865",
+    "storage_bucket": "fair-pro-e0865.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1094873982336:android:3cb6d6148c2010071ecd65",
+        "android_client_info": {
+          "package_name": "com.example.fair_pro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1094873982336-eg9a9n3sr82j8vamgrau6qp6htf5ia0p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDO_T7cIKs0fnxGi0jK2iH8w0QZnxH0a0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1094873982336-eg9a9n3sr82j8vamgrau6qp6htf5ia0p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1094873982336-c5rkpvtp36g1q0mu56qavfgkpga41sog.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.fairPro"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
