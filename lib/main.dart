@@ -1,5 +1,8 @@
 import 'package:fair_pro/firebase_options.dart';
+import 'package:fair_pro/screen/home_screen.dart';
 import 'package:fair_pro/screen/login_screen.dart';
+import 'package:fair_pro/services/auth_services.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +25,16 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LoginScreen(),
+      home: StreamBuilder<User?>(
+        stream: AuthServices().authStateChanges,
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            return HomeScreen();
+          } else {
+            return LoginScreen();
+          }
+        },
+      ),
     );
   }
 }
