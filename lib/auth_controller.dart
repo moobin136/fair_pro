@@ -55,7 +55,13 @@ class AuthController extends GetxController {
           await _auth.signInWithCredential(credential);
         },
         verificationFailed: (FirebaseAuthException e) {
-          Get.snackbar('Error', e.message!);
+          String errorMessage = e.message!;
+          if (e.code == 'invalid-phone-number') {
+            errorMessage = 'The provided phone number is not valid.';
+          } else if (e.code == 'missing-client-identifier') {
+            errorMessage = 'Invalid configuration. Please check your Firebase project settings (SHA-1/SHA-256 fingerprints).';
+          }
+          Get.snackbar('Error', errorMessage);
         },
         codeSent: (String verificationId, int? resendToken) {
           this.verificationId.value = verificationId;
@@ -65,7 +71,7 @@ class AuthController extends GetxController {
         },
       );
     } catch (e) {
-      Get.snackbar('Error', e.toString());
+      Get.snackbar('Error', 'An unexpected error occurred during phone authentication. Please try again.');
     }
   }
 
