@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(); // Firebase ইনিশিয়ালাইজ
+  await Firebase.initializeApp(); 
 
   runApp(const MyApp());
 }
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       title: 'Your App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const AuthWrapper(), // এখানে AuthWrapper দিলাম
+      home: const AuthWrapper(), 
     );
   }
 }
