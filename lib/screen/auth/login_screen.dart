@@ -1,6 +1,6 @@
 import 'package:fair_pro/services/auth_services.dart'; // তোমার AuthServices ইমপোর্ট
-import 'package:fair_pro/screen/password_reset_screen.dart';
-import 'package:fair_pro/screen/sinup_screen.dart'; // SignUpScreen
+import 'package:fair_pro/screen/auth/password_reset_screen.dart';
+import 'package:fair_pro/screen/auth/sinup_screen.dart'; // SignUpScreen
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 

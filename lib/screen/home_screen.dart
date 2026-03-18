@@ -1,5 +1,5 @@
 import 'package:fair_pro/services/auth_services.dart';
-import 'package:fair_pro/screen/login_screen.dart'; 
+import 'package:fair_pro/screen/auth/login_screen.dart'; 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
